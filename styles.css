@@ -54,7 +54,7 @@ h3 {
     padding: 10px;
 }
 
-.flex-content img {
+.flex-content .wideimg {
     max-width: 100%;
     height: auto;
     display: block;
