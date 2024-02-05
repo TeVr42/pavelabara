@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pavel & Bára</title>
+
+    <link rel="shortcut icon" href="images/favicon.ico">
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Allura&family=Noto+Sans+Malayalam:wght@100;200;300;400&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body onload="actualizeTime()">
+
+    <div>
+        <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+            <a class="navbar-brand" href="index.html">Pavel a Bára</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav navbar-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Náš příběh</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="osvatbe.html">O svatbě</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="osvatbe.html#formular">Potvrďte účast</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+
+        <div class="intro photo-sec">
+            <h1 class="hmain">Naše svatba</h1>
+            <h3 class="hundermain">22.6.2024</h3>
+        </div>
+
+
+        <div class="countdown divwhite">
+            <p class="countdowntext">Do svatby zbývá už jen <span id="cdays" class="cvar">0</span> dní <span id="chours"
+                    class="cvar">0</span> hodin <span id="cminutes" class="cvar">0</span> minut a <span id="cseconds"
+                    class="cvar">0</span> sekund. </p>
+        </div>
+
+        <div class="divbeige divpadding">
+            <h2 class="hwhere hinfo">Kde?</h2>
+            <div class="flex-info">
+                <img src="images/generic_barn.jpg" alt="Foto svatebního místa" class="flex-content photo-location">
+                <p class="pinfo flex-content">Svatba probehne na statku v žandově .... Přespání
+                    zajištěno bla bla Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam quis soluta
+                    vero repudiandae itaque quae dolorum
+                    bla</p>
+            </div>
+            <div class="flex-info">
+                <p class="padress flex-content pinfo">Adresa:<br>Žandovská 444 <br>Žandov 333</p>
+                <iframe class="flex-content iframe-location" style="border:none"
+                    src="https://frame.mapy.cz/s/remacagoje" frameborder="0"></iframe>
+            </div>
+        </div>
+
+        <div class="divwhite divprogram">
+            <div class="flex-info">
+                <h2 class="hprogram hinfo flex-content">Program</h2>
+                <div class="timeline-story timeline flex-content">
+                    <div class="container right">
+                        <div class="content contentbeige">
+                            <h5 class="htime">10:00</h5>
+                            <h4 class="hstory">Příjezd hostů</h4>
+                        </div>
+                    </div>
+                    <div class="container right">
+                        <div class="content contentbeige">
+                            <h5 class="htime">12:00</h5>
+                            <h4 class="hstory">Obřad</h4>
+                        </div>
+                    </div>
+                    <div class="container right">
+                        <div class="content contentbeige">
+                            <h5 class="htime">13:00</h5>
+                            <h4 class="hstory">Raut</h4>
+                        </div>
+                    </div>
+                    <div class="container right">
+                        <div class="content contentbeige">
+                            <h5 class="htime">18:00</h5>
+                            <h4 class="hstory">Párty</h4>
+                        </div>
+                    </div>
+                    <div class="container right">
+                        <div class="content contentbeige">
+                            <h5 class="htime">22:00</h5>
+                            <h4 class="hstory">Večerka :-)</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="divbeige divpadding">
+            <h2 class="hinfo">Dresscode</h2>
+            <div class="flex-info">
+                <div class="flex-content pinfo">
+                    <p>Styl ležérní, klidně přijďte v plavkách :).</p>
+                    <p>Oblečte si co se vám líbí, ale pokud chcete sladit šaty, svatba bude v těchto barvách:</p>
+                </div>
+                <div class="flex-content">
+                    <ul class="pinfo ulcolors">
+                        <li class="licolor color-i">Béžová</li>
+                        <li class="licolor color-ii">Modrá</li>
+                        <li class="licolor color-iii">Brčálově zelená</li>
+                </div>
+                </ul>
+            </div>
+        </div>
+
+        <div class="divwhite">
+            <h2 class="hinfo">Potvrďte nám svoji účast</h2>
+            <iframe id="formular"
+                src="https://docs.google.com/forms/d/e/1FAIpQLSesWXleDWjwBzPxaGQMKetXg9JfDprKrhRW2NdPXH39-dHpmg/viewform?embedded=true"
+                width="100%" height="1100px" frameborder="0" marginheight="0" marginwidth="0">Načítání…</iframe>
+        </div>
+
+
+        <footer class="divbeige">
+            <h3 class="hfooter">Těšíme se na Vás</h3>
+
+        </footer>
+
+        <script src="script.js"></script>
+</body>
+
+</html>
