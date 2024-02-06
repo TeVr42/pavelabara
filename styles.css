@@ -1,9 +1,9 @@
 :root {
-    --white: #F5F0ED;
-    --beige: #D4C6BD;
+    --white: #f9f5f0;
+    --beige: #d2cbc6;
     --dark-secondary: #D6B7B5;
-    --dark-main: #3D5361;
-    --black: #213555;
+    --dark-main: #2b1511;
+    --black: #190c09;
 
     --cursive: 'Allura', cursive;
     --serif: 'Playfair Display', serif;
@@ -156,9 +156,12 @@ h3 {
 }
 
 .hfooter {
-    padding: 5rem;
     font-size: 4rem;
     margin: 0;
+}
+
+.divfooter {
+    padding: 5rem;
 }
 
 .pinfo {
@@ -235,6 +238,16 @@ h3 {
     font-size: 2.2rem;
 }
 
+.logo {
+    height: 4rem;
+    border-radius: 50%;
+}
+
+.logo-large {
+    margin: 1rem 0 0;
+    height: 7rem;
+}
+
 .nav-item {
     color: var(--dark-secondary);
     font-family: var(--serif);
@@ -259,6 +272,7 @@ h3 {
 .cvar {
     color: var(--dark-secondary);
 }
+
 
 /* Timeline story */
 .timeline-story {
