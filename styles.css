@@ -424,6 +424,11 @@ h3 {
     width: calc(33.333% - 20px);
     margin: 10px;
     object-fit: cover;
+    filter: grayscale(100%);
+}
+
+.gallery img:hover {
+    filter: grayscale(0%);
 }
 
 @media screen and (max-width: 1000px) {
