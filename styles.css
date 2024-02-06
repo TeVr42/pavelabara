@@ -47,10 +47,15 @@ h3 {
     flex-wrap: wrap;
 }
 
-.flex-content {
+.flex-content,
+.flex-content-program {
     flex: 1 0 50%;
     max-width: 50%;
     box-sizing: border-box;
+    padding: 1rem 2rem;
+}
+
+.flex-content-program {
     padding: 10px;
 }
 
@@ -62,7 +67,12 @@ h3 {
 }
 
 .iframe-location {
-    height: 20rem;
+    height: 22rem;
+    border-radius: 7%;
+}
+
+.photo-location {
+    border-radius: 7%;
 }
 
 .profile {
@@ -78,7 +88,7 @@ h3 {
 }
 
 .divpadding {
-    padding: 3rem 6rem;
+    padding: 3rem 8rem;
 }
 
 .intro {
@@ -291,7 +301,6 @@ h3 {
     left: 50%;
     margin-left: -3px;
 }
-
 
 .timeline::after {
     left: 31px;
