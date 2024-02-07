@@ -119,7 +119,7 @@ h3 {
 }
 
 .hmain {
-    font-size: 8rem;
+    font-size: 7rem;
     color: var(--dark-main);
     text-align: center;
     padding: 10rem 0 0;
@@ -127,7 +127,7 @@ h3 {
 }
 
 .hundermain {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
 }
 
 .hname {
@@ -391,13 +391,20 @@ h3 {
     filter: grayscale(0%);
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1200px) {
+    .divpadding {
+        padding: 3rem 3rem;
+    }
+}
+
+@media screen and (max-width: 990px) {
     .gallery {
         padding: 0;
     }
 
     .gallery img {
         width: calc(50% - 20px);
+        filter: grayscale(0%);
     }
 
     .intro {
@@ -444,14 +451,147 @@ h3 {
         flex: 1 0 100%;
         max-width: 100%;
     }
+
+    .profile {
+        padding: 5%;
+    }
+
+    .hmain {
+        font-size: 6rem;
+    }
+
+    .hundermain {
+        font-size: 2.5rem;
+    }
+
+    .flex-info {
+        display: block;
+    }
+
+    .divpadding {
+        padding: 3rem 4rem;
+    }
+
+    .padress {
+        text-align: left;
+    }
+
+    .pinfo {
+        font-size: 1.5rem;
+        padding: 1rem 2rem;
+    }
+
+    .iframe-location {
+        width: 100%;
+    }
+
+    .flex-content,
+    .flex-content-program {
+        max-width: 100%;
+    }
+
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 870px) {
+    .container-profiles {
+        display: block;
+        text-align: center;
+    }
+}
+
+
+@media screen and (max-width: 590px) {
     .gallery {
         padding: 0;
     }
 
     .gallery img {
         width: calc(100% - 20px);
+    }
+
+    .ourstory {
+        padding: 0.5rem;
+    }
+
+    .hmain {
+        font-size: 4rem;
+    }
+
+    h2 {
+        font-size: 2.3rem;
+        padding: 1rem;
+    }
+
+    .profile-img {
+        height: 11rem;
+    }
+
+    .hname {
+        font-size: 3.2rem;
+    }
+
+    .hfooter {
+        font-size: 3rem;
+    }
+
+    .logo-large {
+        height: 5rem;
+    }
+
+    .divfooter {
+        padding: 3rem;
+    }
+
+    .hstory {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+
+    .content {
+        padding: 10px 20px;
+    }
+
+    .mybtn {
+        font-size: 1.7rem;
+        padding: 1rem 4rem;
+        margin: 1rem;
+    }
+
+    .countdowntext {
+        font-size: 2.5rem;
+        padding: 2.5rem 1.5rem;
+    }
+
+    .divpadding {
+        padding: 2rem 0.5rem;
+    }
+
+    .hinfo {
+        padding: 1rem;
+    }
+
+    .flex-content {
+        padding: 1rem;
+    }
+
+    .flex-content-program {
+        padding: 2rem 1rem;
+    }
+
+    .pinfo {
+        padding: 0 1rem;
+        font-size: 1.2rem;
+    }
+
+    .hschedule {
+        font-weight: 500;
+    }
+
+    .timeline .right::after {
+        left: 3px;
+    }
+
+    .divform {
+        padding: 2rem 0;
     }
 }
