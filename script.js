@@ -3,7 +3,7 @@ var chours = document.getElementById("chours");
 var cmin = document.getElementById("cminutes");
 var csec = document.getElementById("cseconds");
 
-var weddingDate = new Date('06/22/2024 0:00 PM');
+var weddingDate = new Date('06/22/2024 1:00 PM');
 
 var _second = 1000;
 var _minute = _second * 60;
