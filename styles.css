@@ -126,7 +126,7 @@ a:hover {
 }
 
 .profiles {
-    padding: 5rem 0 0;
+    padding: 5rem 0 3rem;
 }
 
 .hmain {
@@ -452,6 +452,10 @@ a:hover {
         background-image: url("images/Cover_photo_iii.jpg");
     }
 
+    .profiles {
+        padding: 3rem 0 2rem;
+    }
+
     .intro {
         background-size: cover;
         height: 50rem;
@@ -507,6 +511,11 @@ a:hover {
 
     .hundermain {
         font-size: 2.5rem;
+    }
+
+    .hfooter {
+        font-size: 2.5rem;
+        margin: 0;
     }
 
     .flex-info {
@@ -598,11 +607,11 @@ a:hover {
     }
 
     .logo-large {
-        height: 5rem;
+        height: 4rem;
     }
 
     .divfooter {
-        padding: 3rem;
+        padding: 2.5rem;
     }
 
     .hstory {
