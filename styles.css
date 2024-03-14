@@ -198,9 +198,7 @@ a:hover {
 }
 
 .padress {
-    font-family: var(--serif);
     text-align: right;
-    font-size: 1.8rem;
 }
 
 .pstory {
@@ -419,6 +417,11 @@ a:hover {
     filter: grayscale(0%);
 }
 
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+
 @media screen and (max-width: 1200px) {
     .divpadding {
         padding: 3rem 3rem;
@@ -635,7 +638,7 @@ a:hover {
     }
 
     .divpadding {
-        padding: 2rem 0.5rem;
+        padding: 2.5rem 0.5rem 3.5rem;
     }
 
     .divpaddingtext {
