@@ -30,16 +30,6 @@ h3 {
     font-family: var(--cursive);
 }
 
-.container-profiles {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin: 2rem 6rem;
-    color: var(--white);
-    border-radius: 10px;
-}
-
 .flex-info {
     display: flex;
     align-items: center;
@@ -73,10 +63,6 @@ h3 {
 
 .photo-location {
     border-radius: 7%;
-}
-
-.profile {
-    padding: 4rem;
 }
 
 .divwhite {
@@ -120,15 +106,6 @@ a:hover {
     background-image: url("images/Cover_photo_i.jpg");
 }
 
-
-.ourstory {
-    padding: 5rem;
-}
-
-.profiles {
-    padding: 5rem 0 3rem;
-}
-
 .hmain {
     font-size: 7rem;
     color: var(--dark-main);
@@ -141,10 +118,6 @@ a:hover {
     font-size: 3.5rem;
 }
 
-.hname {
-    font-size: 4rem;
-    color: var(--dark-main);
-}
 
 .hourstory {
     padding-bottom: 3rem;
@@ -170,10 +143,6 @@ a:hover {
 
 .hinfo {
     padding: 3rem;
-}
-
-.hprofiles {
-    color: var(--white);
 }
 
 .hfooter {
@@ -328,10 +297,6 @@ a:hover {
     margin-left: -3px;
 }
 
-.timeline::after {
-    left: 31px;
-}
-
 .container {
     padding: 10px 40px;
     position: relative;
@@ -370,33 +335,6 @@ a:hover {
     position: relative;
     border-radius: 6px;
     text-align: left;
-}
-
-.timeline .contentbeige {
-    background-color: var(--beige);
-}
-
-.timeline .container {
-    width: 100%;
-    padding-left: 70px;
-    padding-right: 25px;
-}
-
-.timeline .container::before {
-    left: 60px;
-    border: medium solid white;
-    border-width: 10px 10px 10px 0;
-    border-color: transparent white transparent transparent;
-}
-
-
-.timeline .left::after,
-.timeline .right::after {
-    left: 8px;
-}
-
-.timeline .right {
-    left: 0%;
 }
 
 .gallery {
@@ -441,7 +379,7 @@ a:hover {
     }
 }
 
-@media screen and (max-width: 990px) {
+@media screen and (max-width: 1190px) {
     .gallery {
         padding: 0;
     }
@@ -452,11 +390,7 @@ a:hover {
     }
 
     .photo-main {
-        background-image: url("images/Cover_photo_iii.jpg");
-    }
-
-    .profiles {
-        padding: 3rem 0 2rem;
+        background-image: url("images/Cover_photo_ii.jpg");
     }
 
     .intro {
@@ -571,14 +505,6 @@ a:hover {
 
 }
 
-@media screen and (max-width: 870px) {
-    .container-profiles {
-        display: block;
-        text-align: center;
-    }
-}
-
-
 @media screen and (max-width: 590px) {
     .gallery {
         padding: 0;
@@ -599,14 +525,6 @@ a:hover {
     h2 {
         font-size: 2.3rem;
         padding: 1rem;
-    }
-
-    .profile-img {
-        height: 11rem;
-    }
-
-    .hname {
-        font-size: 3.2rem;
     }
 
     .logo-large {
@@ -667,19 +585,15 @@ a:hover {
         font-size: 1.2rem;
     }
 
-    .hschedule {
-        font-weight: 500;
-    }
-
-    .timeline .right::after {
-        left: 3px;
-    }
-
     .divform {
         padding: 2rem 0;
     }
 
     .navbar {
         padding: 0.3rem 1rem;
+    }
+
+    .photo-main {
+        background-image: url("images/Cover_photo_iii.jpg");
     }
 }
