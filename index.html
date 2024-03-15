@@ -65,7 +65,7 @@
             <h2 class="hinfo">Náš příběh</h2>
             <div class="timeline-story">
                 <div class="container left">
-                    <div class="content">
+                    <div class="content scroll-show">
                         <h5 class="hdate">2015</h5>
                         <h4 class="hstory">Poprvé se potkali</h4>
                         <p class="pstory">Být aktivní ve studentských spolcích se někdy vyplácí, můžete získávat plusové
@@ -77,7 +77,7 @@
                     </div>
                 </div>
                 <div class="container right">
-                    <div class="content">
+                    <div class="content scroll-show">
                         <h5 class="hdate">2023</h5>
                         <h4 class="hstory">On požádal o ruku, ona řekla ano</h4>
                         <p class="pstory">Co se na první pohled zdálo jako dovolená na poslední chvíli, kterou jsme
@@ -93,7 +93,7 @@
                     </div>
                 </div>
                 <div class="container left">
-                    <div class="content">
+                    <div class="content scroll-show">
                         <h5 class="hdate">22.6.2024</h5>
                         <h4 class="hstory">Naše svatba</h4>
                         <p class="pstory">Proběhne 22.6.2024 v usedlosti Pod Strážným vrchem a budeme rádi, když tento
@@ -106,7 +106,7 @@
             <a class="btn btn-black mybtn" href="svatba.html" role="button">Více o svatbě</a>
         </div>
 
-        <div class="divbeige gallery">
+        <div class="divbeige gallery scroll-show">
             <img src="images/1.jpg" alt="Obrázek 1">
             <img src="images/2.jpg" alt="Obrázek 2">
             <img src="images/3.jpg" alt="Obrázek 3">
@@ -127,7 +127,37 @@
         <img src="images/logo.png" class="logo-large" alt="logo">
 
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var scrollShowElements = document.querySelectorAll('.scroll-show');
 
+            function checkPosition() {
+                for (var i = 0; i < scrollShowElements.length; i++) {
+                    var element = scrollShowElements[i];
+                    var elementPosition = element.getBoundingClientRect().top;
+                    var windowHeight = window.innerHeight;
+                    if (windowHeight >= 600) {
+                        offset = windowHeight * 0.4;
+                    } else {
+                        offset = windowHeight * 0.8;
+                    }
+
+                    if (elementPosition + offset < windowHeight) {
+                        element.classList.add('show');
+                        scrollShowElements = Array.prototype.filter.call(scrollShowElements, function (el) {
+                            return el !== element;
+                        });
+                    }
+                }
+                if (scrollShowElements.length === 0) {
+                    window.removeEventListener('scroll', checkPosition);
+                }
+            }
+
+            window.addEventListener('scroll', checkPosition);
+            checkPosition();
+        });
+    </script>
 </body>
 
 </html>

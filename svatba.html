@@ -62,7 +62,7 @@
         </div>
 
 
-        <div class="countdown divwhite">
+        <div class="countdown divwhite scroll-show">
             <p class="countdowntext">Do svatby zbývá už jen <span id="cdays" class="cvar">0</span> <span
                     id="tdays">dní</span> <span id="chours" class="cvar">0</span> <span id="thours">hodin</span>
                 <span id="cminutes" class="cvar">0</span> <span id="tminutes">minut</span> a <span id="cseconds"
@@ -72,7 +72,7 @@
 
         <div class="divbeige divpadding">
             <h2 class="hinfo">Svatba</h2>
-            <div class="flex-info">
+            <div class="flex-info scroll-show">
                 <img src="images/Misto_svatby.jpeg" alt="Foto svatebního místa" class="flex-content photo-location">
                 <p class="pinfo flex-content"><strong>Celý náš svatební den </strong>proběhne v usedlosti Pod Strážným
                     vrchem v
@@ -85,7 +85,7 @@
                     máme pronajatou na celý víkend, můžete dorazit a ubytovat se už od pátku 21.6.
                 </p>
             </div>
-            <div class="flex-info">
+            <div class="flex-info scroll-show">
                 <p class="padress flex-content pinfo"><strong>Adresa:</strong><br>Heřmanice 112, <br> 470 02 Žandov <br>
                     GPS: 50.66480N,
                     14.38853E</p>
@@ -96,7 +96,7 @@
 
         <div class="divwhite divpadding">
             <h2 class="hinfo">Ubytování</h2>
-            <div class="divpaddingtext pinfofull pfulltext">
+            <div class="divpaddingtext pinfofull pfulltext scroll-show">
                 <p>Ubytování je <strong>zajištěno přímo v usedlosti</strong> ve vícelůžkových pokojích (3-11 lůžkové).
                     Pro příznivce
                     spaní venku je možné spaní ve stanu, případně pod širákem.
@@ -108,7 +108,7 @@
 
         <div class="divbeige divpadding">
             <h2 class="hinfo">Dresscode</h2>
-            <div class="divpaddingtext pinfofull pfulltext">
+            <div class="divpaddingtext pinfofull pfulltext scroll-show">
                 <p>Chceme, abyste naši svatbu vnímali jako příjemnou neformální oslavu,
                     přesto se však jedná <strong>o společenskou událost</strong>, proto, prosíme, přizpůsobte tomuto
                     faktu své
@@ -122,7 +122,7 @@
 
         <div class="divwhite divpadding">
             <h2 class="hinfo">Svatební dary</h2>
-            <div class="divpaddingtext pinfofull pfulltext">
+            <div class="divpaddingtext pinfofull pfulltext scroll-show">
                 <p>Domácnost máme za ty roky vybavenou obstojně (díky mami) a sadu talířů či nové povlečení
                     nepotřebujeme. <br><br> Pokud nás tedy chcete obdarovat, budeme rádi za <strong>finanční
                         příspěvek</strong> na
@@ -135,7 +135,7 @@
 
         <div class="divbeige divform">
             <h2 class="hinfo">Formulář potvrzení účasti</h2>
-            <iframe id="formular"
+            <iframe id="formular" class="scroll-show"
                 src="https://docs.google.com/forms/d/e/1FAIpQLSeNL7yg-uNEMiRF3oCO1dVYGl3k3BkWDnhje8UJbIZ2O71aiQ/viewform?embedded=true"
                 width="100%" height="1250px" frameborder="0" marginheight="0" marginwidth="0">Formulář</iframe>
         </div>
@@ -149,6 +149,38 @@
         </footer>
 
         <script src="script.js"></script>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                var scrollShowElements = document.querySelectorAll('.scroll-show');
+
+                function checkPosition() {
+                    for (var i = 0; i < scrollShowElements.length; i++) {
+                        var element = scrollShowElements[i];
+                        var elementPosition = element.getBoundingClientRect().top;
+                        var windowHeight = window.innerHeight;
+                        if (windowHeight >= 600) {
+                            offset = windowHeight * 0.4;
+                        } else {
+                            offset = windowHeight * 0.8;
+                        }
+
+                        if (elementPosition + offset < windowHeight) {
+                            element.classList.add('show');
+                            scrollShowElements = Array.prototype.filter.call(scrollShowElements, function (el) {
+                                return el !== element;
+                            });
+                        }
+                    }
+                    if (scrollShowElements.length === 0) {
+                        window.removeEventListener('scroll', checkPosition);
+                    }
+                }
+
+                window.addEventListener('scroll', checkPosition);
+                checkPosition();
+            });
+        </script>
 </body>
 
 </html>

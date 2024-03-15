@@ -30,6 +30,15 @@ h3 {
     font-family: var(--cursive);
 }
 
+.scroll-show {
+    opacity: 0;
+    transition: opacity 0.7s ease-in;
+}
+
+.show {
+    opacity: 1;
+}
+
 .flex-info {
     display: flex;
     align-items: center;
@@ -360,7 +369,7 @@ a:hover {
     padding-left: 1rem;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1190px) {
     .divpadding {
         padding: 3rem 3rem;
     }
@@ -377,9 +386,7 @@ a:hover {
     .pstory {
         font-size: 1rem;
     }
-}
 
-@media screen and (max-width: 1190px) {
     .gallery {
         padding: 0;
     }
