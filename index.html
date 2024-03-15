@@ -136,13 +136,8 @@
                     var element = scrollShowElements[i];
                     var elementPosition = element.getBoundingClientRect().top;
                     var windowHeight = window.innerHeight;
-                    if (windowHeight >= 600) {
-                        offset = windowHeight * 0.4;
-                    } else {
-                        offset = windowHeight * 0.8;
-                    }
 
-                    if (elementPosition + offset < windowHeight) {
+                    if (elementPosition < windowHeight) {
                         element.classList.add('show');
                         scrollShowElements = Array.prototype.filter.call(scrollShowElements, function (el) {
                             return el !== element;
