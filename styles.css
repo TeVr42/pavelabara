@@ -30,6 +30,10 @@ h3 {
     font-family: var(--cursive);
 }
 
+#formular {
+    scroll-margin-top: 15rem;
+}
+
 .scroll-show {
     opacity: 0;
     transition: opacity 0.6s ease-in;
@@ -370,6 +374,11 @@ a:hover {
 }
 
 @media screen and (max-width: 1190px) {
+
+    #formular {
+        scroll-margin-top: 13rem;
+    }
+
     .divpadding {
         padding: 3rem 3rem;
     }
